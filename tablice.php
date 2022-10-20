@@ -16,17 +16,18 @@
     <?php
 
     @$losowa = $_POST['losowa'];
-    @$random = rand(0,100)."<br>";
-    echo($random);
+    @$pierwsza = null;
+  
 
     echo("<table>");
 
-    for($i = 1; $i <= $losowa; $i++){
-       echo("<td>".$random."<?td>");
+    for($i = 1; $i <= $losowa;   $i++){
+      @$rand = rand(0,100);
+       echo("<td>".$rand."<?td>");
+       if($pierwsza == null) $pierwsza = $rand;
+       if($i % 20 == 0)echo("<tr>");
+
     }
-
-
-
 
 
 
@@ -57,7 +58,7 @@
 
 <style>
 
-td,
+/* td,
 tr {
   border: 1px solid black;
   border-radius: 15px;
@@ -69,7 +70,7 @@ tr {
 td:hover,
 tr:hover {
   background-color: red;
-}
+} */
 
     </style>
 </body>
