@@ -20,6 +20,8 @@
         @$ilelicbz = 0;
         @$ilelicbz1 = 0;
         @$ilelicbz2 = 0;
+        @$ilelicbz3 = 0;
+        @$ilelicbz3 = 0;
 
         echo("Tablica 1: ");
         for($i = 0; $i< 50; $i++){
@@ -29,7 +31,17 @@
                 $srednia1 = $srednia1 + $tablica1[$i];
                 @$ilelicbz = $ilelicbz + 1;
             }
+            if($tablica2[$i] == 35){
+                @$ilelicbz4 = $ilelicbz4 + 1;
+            }
         }
+        echo("<br>");
+        for($k = 49; $k>=0; $k-- ){
+            echo($tablica1[$k]." ");
+        }
+
+
+
         echo("<hr>");
         echo("Tablica 2: ");
         for($j = 0; $j< 50; $j++){
@@ -41,7 +53,16 @@
             if($tablica2[$j] >= 35){
                 @$ilelicbz1 = $ilelicbz1 + 1;
             }
+            if($tablica2[$j] == 35){
+                @$ilelicbz3 = $ilelicbz3 + 1;
+            }
         }
+
+        echo("<br>");
+        for($s = 49; $s>=0; $s-- ){
+            echo($tablica2[$s]." ");
+        }
+
         echo("<hr>");
 
         echo("Srednia 1: ".$srednia1/$ilelicbz);
@@ -49,13 +70,13 @@
         echo("Liczba parz w 2 tab: ".$ilelicbz2);
         echo("<hr>");
 
-        if($ilelicbz1 > $ilelicbz2){
-            echo("W pierweszej tablicy jest wicej liczb wiekszych niz 35:"." ".$ilelicbz)."<hr>";
+        if($ilelicbz3 > $ilelicbz4){
+            echo("W pierweszej tablicy jest wicej liczb wiekszych niz 35:"." ".$ilelicbz3)."<hr>";
         }else{
-            echo("W drugiej tablicy jest wicej liczb wiekszych niz 35"." ".$ilelicbz1)."<hr>";
+            echo("W drugiej tablicy jest wicej liczb wiekszych niz 35"." ".$ilelicbz4)."<hr>";
         }
 
-        
+
 
     ?>
 </body>
